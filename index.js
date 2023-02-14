@@ -47,7 +47,7 @@ app.post("/", express.json(), (req, res) => {
     agent.add(`Je n'ai pas saisi ce que vous avez dit.`);
   };
 
-  const getRandomSuccessMessage = (array) => {
+  const getRandomMessage = (array) => {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
   };
@@ -69,9 +69,9 @@ app.post("/", express.json(), (req, res) => {
     console.log("RESPONSE : " + res);
     const userName = res.STR_CLIENT;
     if (res.code_statut === "1") {
-      agent.add(getRandomSuccessMessage(msgSuccess).replace("XXXXX", userName));
+      agent.add(getRandomMessage(msgSuccess).replace("XXXXX", userName));
 
-      agent.add(getRandomSuccessMessage(operationChoix));
+      agent.add(getRandomMessage(operationChoix));
       const payloadData = {
         richContent: [
           [
@@ -105,7 +105,7 @@ app.post("/", express.json(), (req, res) => {
       );
     }
 
-    agent.add(getRandomSuccessMessage(authEchec));
+    agent.add(getRandomMessage(authEchec));
   };
 
   const authConsultationSolde = async (agent) => {
@@ -116,7 +116,7 @@ app.post("/", express.json(), (req, res) => {
     console.log(res.STR_COMPTES);
 
     if (res.code_statut === "1") {
-      agent.add(getRandomSuccessMessage(AccountChoix));
+      agent.add(getRandomMessage(AccountChoix));
       const payloadData = {
         richContent: [
           [
@@ -143,7 +143,7 @@ app.post("/", express.json(), (req, res) => {
       );
     }
 
-    agent.add(getRandomSuccessMessage(EchecSoldeVirement));
+    agent.add(getRandomMessage(EchecSoldeVirement));
   };
 
   const SoldeSpecificCompte = async (agent) => {
@@ -153,15 +153,15 @@ app.post("/", express.json(), (req, res) => {
 
     if (res.code_statut === "1") {
       agent.add(
-        getRandomSuccessMessage(soldeInfo)
+        getRandomMessage(soldeInfo)
           .replace("XXXXX", res.SOLDE)
           .replace("YYYYY", res.DEVIS)
       );
 
-      return agent.add(getRandomSuccessMessage(AutreServices));
+      return agent.add(getRandomMessage(AutreServices));
     }
 
-    agent.add(getRandomSuccessMessage(EchecSoldeVirement));
+    agent.add(getRandomMessage(EchecSoldeVirement));
   };
 
   let intentMap = new Map();
