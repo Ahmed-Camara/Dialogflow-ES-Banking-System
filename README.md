@@ -16,4 +16,4 @@ When the user asks for one of these features, the intent containing the authenti
 #### Transaction
 
 ### NOTES
-You may notice that the 'model' folder, which contains the 'chatBotModel.js' file, has been ignored in the '.gitignore' file. This is because the file contains sensitive data that cannot be shared, as well as code to call external endpoints, as this project requires user authentication.
+You may notice that the 'model' folder, which contains the 'chatBotModel.js' file, has been ignored in the '.gitignore' file. This is because the file contains sensitive data that cannot be shared, as well as code to call external endpoints.
