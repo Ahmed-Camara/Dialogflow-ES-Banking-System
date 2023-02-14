@@ -11,7 +11,7 @@ When the user asks for one of these features, the intent containing the authenti
 <img src="./images/auth.png">
 <p>When the user chooses to check their balance, automatically the list of all their accounts will be automatically shown. As we know in a bank, a user may have multiple bank accounts. From this list they will choose the relevant  account, and we will send the balance associated with that account to the user, as shown in the figures below.</p>
 <img src="./images/compte.png">
-<img src="./images/ksolde.png">
+<img src="./images/solde.png">
 #### Transaction
 
 ### NOTES
