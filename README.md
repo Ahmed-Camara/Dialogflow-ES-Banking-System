@@ -8,7 +8,7 @@ In order to proceed with these two features, the user will have to be authentica
 When the user asks for one of these features, the intent that contains the authentication flow will automatically be triggered.
 
 #### Balance inquiry
-When the user is authenticated, a list of services will be shown to him and will be asked to chose the service he wants as shown in the figure below
+<p>When the user is authenticated, a list of services will be shown to him and will be asked to chose the service he wants as shown in the figure below</p>
 <img src="./images/auth.png">
 
 #### Transaction
