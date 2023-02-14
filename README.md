@@ -9,7 +9,7 @@ When the user asks for one of these features, the intent that contains the authe
 
 #### Balance inquiry
 When the user is authenticated, a list of services will be shown to him and will be asked to chose the service he wants as shown in the figure below
-<img src"./images/auth.png">
+<img src="./images/auth.png">
 
 #### Transaction
 
